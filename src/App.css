@@ -1,0 +1,143 @@
+::-webkit-scrollbar {
+   width: 5px;
+   height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 10px;
+   width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+.custom-scrollbars > div:last-child {
+   opacity: 0;
+   transition: opacity 200ms ease;
+}
+
+.custom-scrollbars:hover > div:last-child {
+   opacity: 1;
+}
+#clinicProfitability > div {
+   max-height: calc(100vh - 170px);
+   overflow: auto;
+   box-shadow: none !important;
+   margin: 15px;
+}
+
+#clinicProfitability table {
+   width: 100%;
+   border-spacing: 0;
+   font-size: 14px;
+}
+#clinicProfitability table thead > tr:first-child {
+   position: sticky;
+   left: 0;
+   top: 0;
+   z-index: 50;
+   display: flex;
+}
+#clinicProfitability table thead > tr:first-child th:first-child {
+   border-left: 1px solid #dee2e6;
+   width: 335px;
+   background-color: #eff4fa;
+   text-align: center;
+}
+#clinicProfitability table thead > tr:first-child th {
+   border-top: 1px solid #dee2e6;
+   width: 90px;
+   background-color: #eff4fa;
+   text-align: center;
+}
+#clinicProfitability table thead > tr:nth-child(2) {
+   position: sticky;
+   left: 0;
+   z-index: 50;
+   display: flex;
+}
+#clinicProfitability table thead > tr:nth-child(2) th {
+   width: 90px;
+}
+#clinicProfitability table thead > tr:nth-child(2) th:first-child {
+   border-left: 1px solid #dee2e6;
+   width: 335px;
+   background-color: #eff4fa;
+   text-align: center;
+}
+#clinicProfitability table tbody {
+   background-color: transparent;
+   display: flex;
+   flex-direction: column;
+}
+#clinicProfitability table tbody > tr {
+   display: inline-flex;
+}
+#clinicProfitability table tbody > tr:hover .row-sort-default-icon {
+   display: flex;
+   z-index: 50;
+}
+#clinicProfitability table tbody > tr:hover .row-sort-asc-desc-icon,
+#clinicProfitability table tbody > tr:hover .row-filter-asc-desc-icon {
+   display: flex;
+   z-index: 50;
+}
+#clinicProfitability table tbody > tr th:first-child {
+   border-left: 1px solid #dee2e6;
+   background-color: #fff;
+   width: 335px;
+}
+#clinicProfitability table tbody > tr td,
+#clinicProfitability table tbody > tr th {
+   width: 90px;
+}
+#clinicProfitability table tbody > tr td:last-child {
+   background: #eff4fa;
+   font-weight: 600;
+}
+#clinicProfitability table tbody tr:last-child {
+   position: sticky;
+   left: 0;
+   bottom: 0;
+   z-index: 50;
+   height: 30px;
+   display: flex;
+}
+#clinicProfitability table tr th:first-child {
+   text-align: left;
+   font-weight: normal;
+   position: sticky;
+   left: 0px;
+   z-index: 40;
+   background-color: inherit;
+}
+#clinicProfitability table tr:hover {
+   background-color: #e8f3ff;
+}
+#clinicProfitability table tr:hover th:first-child {
+   background-color: #e8f3ff;
+}
+#clinicProfitability table tr :last-child th,
+#clinicProfitability table tr :last-child td {
+   border-bottom: 0;
+}
+#clinicProfitability table th,
+#clinicProfitability table td {
+   margin: 0;
+   padding: 0.25rem 0.5rem;
+   border-bottom: 1px solid #dee2e6;
+   border-right: 1px solid #dee2e6;
+   text-align: right;
+}
+#clinicProfitability table thead th:not(:nth-child(1)) {
+   background-color: #eff4fa;
+   text-align: center;
+}
