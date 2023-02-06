@@ -1,10 +1,10 @@
-import { Box, Button, Paper, Typography } from '@mui/material';
+import { Box, Button, Paper, Skeleton, Typography } from '@mui/material';
 import React from 'react';
 import GetAppTwoToneIcon from '@mui/icons-material/GetAppTwoTone';
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import TableData from '../../../components/common/TableData';
 
-const HuddleReport = ({ drawerWidth }) => {
+const HuddleReport = ({ drawerWidth, isLoading }) => {
    const clinicDetailsData = [
       {
          clinic: 'Narberth',
@@ -131,7 +131,9 @@ const HuddleReport = ({ drawerWidth }) => {
             </Box>
          </Box>
          <Box display={'flex'} alignItems='center' ml={'10px'} mb={2}>
-            <Typography variant='subtitle1'>Clinic:Narberth</Typography>
+            <Typography component={'div'} variant='subtitle1'>
+               Clinic:Narberth
+            </Typography>
             <Button>
                <ArrowCircleLeftOutlinedIcon />
                <Typography>Go back to Regional Overview</Typography>

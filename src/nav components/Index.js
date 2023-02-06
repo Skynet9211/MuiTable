@@ -11,14 +11,17 @@ import {
    Grid,
    Paper,
    Divider,
+   Switch,
+   FormControlLabel
 } from '@mui/material';
 
 import PersonIcon from '@mui/icons-material/Person';
 import NavDrawer from './NavDrawer';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-const Navbar = ({ drawerWidth, open, toggleDrawer }) => {
+const Navbar = ({ drawerWidth, open, toggleDrawer,toggleLoading }) => {
    const [anchorEl, setAnchorEl] = React.useState(null);
    const [openTooltip, setOpenTooltip] = React.useState(false);
+ 
 
    function handleClick(event) {
       if (anchorEl !== event.currentTarget) {
@@ -33,6 +36,7 @@ const Navbar = ({ drawerWidth, open, toggleDrawer }) => {
    const drawerButton = () => {
       return drawerWidth - 20;
    };
+   
    const UserHelpDropDown = () => {
       return (
          <>
@@ -103,6 +107,7 @@ const Navbar = ({ drawerWidth, open, toggleDrawer }) => {
                disableGutters
             >
                <Stack direction='row' spacing={2} alignItems='center' sx={{ marginRight: '30px' }}>
+                  <FormControlLabel control={<Switch onChange={()=>toggleLoading()} color='error'/>} label='Loading' /> 
                   <Tooltip
                      onClose={() => setOpenTooltip(false)}
                      open={openTooltip}

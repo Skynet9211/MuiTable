@@ -8,7 +8,8 @@ import ThemeProvider from './theme';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { blueGrey } from '@mui/material/colors';
 import HuddleReport from './pages/Clinics/Huddle Report/HuddleReport';
-
+import { logDOM } from '@testing-library/react';
+import { ScaleLoader } from 'react-spinners';
 function App() {
    const DEFAULT_WIDTH = 85;
    const EXPANDED_WIDTH = 240;
@@ -16,6 +17,10 @@ function App() {
    const [sidebarWidth, setSidebarWidth] = useState(DEFAULT_WIDTH);
    const [dropDown, setDropDown] = useState(false);
    const [selectedButton, setSelectedButton] = useState(1);
+   const [isLoading, setisLoading] = React.useState(false);
+   const toggleLoading = () => {
+      setisLoading(!isLoading);
+   };
    const handleChange = () => {
       setDropDown(!dropDown);
       if (sidebarWidth !== 0) {
@@ -33,7 +38,7 @@ function App() {
    const sidebarWidthChange = () => {
       open && true ? setSidebarWidth(DEFAULT_WIDTH) : setSidebarWidth(EXPANDED_WIDTH);
    };
-
+   console.log(isLoading);
    return (
       <div className='App'>
          <BrowserRouter>
@@ -43,21 +48,35 @@ function App() {
                   open={open}
                   toggleDrawer={toggleDrawer}
                   handleChange={handleChange}
+                  toggleLoading={toggleLoading}
                />
+                     <ScaleLoader
+                     loading={isLoading}
+                     color={'#0092E1'}
+                     height={25}
+                     aria-label='Loading Spinner'
+                     data-testid='loader'
+                     style={{position:'fixed',zIndex:2500,marginLeft:'50%',marginTop:'0.5%'}}
+                  />
                <div>
+            
+
                   <Routes>
-                     <Route path='/Home' element={<Mainpage drawerWidth={sidebarWidth} />} />
+                     <Route
+                        path='/Home'
+                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
+                     />
                      <Route
                         path='Home/Clinic Profitability'
-                        element={<Mainpage drawerWidth={sidebarWidth} />}
+                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                      <Route
                         path='Appointments/Cancellations'
-                        element={<Appointments drawerWidth={sidebarWidth} />}
+                        element={<Appointments drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                      <Route
                         path='Home/Huddle Report'
-                        element={<HuddleReport drawerWidth={sidebarWidth} />}
+                        element={<HuddleReport drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                   </Routes>
                </div>

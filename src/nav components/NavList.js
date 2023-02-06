@@ -9,8 +9,9 @@ import {
    AccordionDetails,
    ListItemIcon,
    ListItemButton,
-} from '@mui/material';
 
+} from '@mui/material';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { drawerDataMain } from '../data/drawerDataMain';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -55,7 +56,9 @@ const ListNav = () => {
                      <List>
                         {data.submenu.map((sub, i) => (
                            <ListItemButton
-                              component={Link}
+                              component={NavLink}
+                              activeStyle={{  fontWeight: "bold",
+                              backgroundColor: "rgba(255, 255, 255, 0.1)",}}
                               to={`${data.path}/${sub}`}
                               sx={{
                                  '&.MuiListItemButton-root.Mui-selected': {
@@ -75,8 +78,8 @@ const ListNav = () => {
                               }}
                               // component='a'
                               // href={data.path}
-                              selected={selectedIndex === i}
-                              onClick={event => handleListItemClick(event, i)}
+                              // selected={selectedIndex === i}
+                              // onClick={event => handleListItemClick(event, i)}
                            >
                               <ListItemIcon>
                                  <FiberManualRecordOutlinedIcon sx={{ fontSize: '10px' }} />

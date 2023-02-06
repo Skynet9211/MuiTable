@@ -45,7 +45,7 @@ const NavListShort = () => {
                      component={Link}
                      to={`${data.path}/${sub}`}
                      sx={{ textDecoration: 'none' }}
-                     onClick={event => handleListItemClick(event, data.id - 1)}
+                    
                   >
                      <span style={{ textDecoration: 'none' }}>{sub}</span>
                   </MenuItem>
@@ -76,8 +76,8 @@ const NavListShort = () => {
                      },
                      marginBottom: '2px',
                   }}
-                  onClick={event => handleListItemClick(event, i)}
-                  selected={selectedIndex === i}
+                  // onClick={event => handleListItemClick(event, i)}
+                  // selected={selectedIndex === i}
                >
                   {data.icon}
                   <Typography variant='caption' noWrap>
