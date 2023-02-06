@@ -1,4 +1,4 @@
-export const data = [
+export const modalData = [
    {
       cid: '172',
       clinic: 'Amherst, NY',

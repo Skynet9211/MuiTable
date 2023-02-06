@@ -124,7 +124,7 @@ const HuddleReport = ({ drawerWidth, isLoading }) => {
                </Typography>
             </Box>
             <Box>
-               <Button variant='contained' color='secondary'>
+               <Button variant='contained' color='secondary' sx={{boxShadow:'0px 5px 5px 0px rgb(85 195 142 / 24%)'}}>
                   <GetAppTwoToneIcon />
                   <Typography>Export</Typography>
                </Button>

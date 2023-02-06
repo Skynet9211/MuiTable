@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../../../data/clinicprofitabilityData';
+import { data } from '../../../data/Clinic profitability/clinicprofitabilityData';
 import { useExpanded, useGroupBy, useTable } from 'react-table';
 import _ from 'lodash';
 import numeral from 'numeral';

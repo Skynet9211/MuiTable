@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import numeral from 'numeral';
 import { useTable, useSortBy, useGroupBy, useExpanded } from 'react-table';
-import { data } from '../../../data/cliniprofitabilityModalData';
+import { modalData as data } from '../../../data/Clinic profitability/cliniprofitabilityModalData';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -325,7 +325,7 @@ const ModalProfit = props => {
                }}
             >
                <Typography variant='h4'>Grand Total Clinic Details</Typography>
-               <Button variant='contained' sx={{ marginRight: '40px' }} color='secondary'>
+               <Button variant='contained' sx={{ marginRight: '40px',boxShadow:'0px 5px 5px 0px rgb(85 195 142 / 24%)' }} color='secondary'>
                   <GetAppTwoToneIcon />
                   Export
                </Button>

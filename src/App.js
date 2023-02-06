@@ -62,6 +62,10 @@ function App() {
             
 
                   <Routes>
+                  <Route
+                        path='/'
+                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
+                     />
                      <Route
                         path='/Home'
                         element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
