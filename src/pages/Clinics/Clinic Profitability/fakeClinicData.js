@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { data } from './data/clinicprofitabilityData';
+import { data } from '../../../data/clinicprofitabilityData';
 import { useExpanded, useGroupBy, useTable } from 'react-table';
 import _ from 'lodash';
 import numeral from 'numeral';
+import { Modal } from '@mui/material';
+import ModalProfit from './modal';
 
-const FakeClinicProfitData = () => {
+const FakeClinicProfitData = ({ selectValue }) => {
    const [linkCategory, setLinkCategory] = useState(null);
 
    const _onLinkClick = category => {
@@ -132,7 +134,7 @@ const FakeClinicProfitData = () => {
             return value;
       }
    };
-   console.log(data);
+
    const columns = React.useMemo(
       () => [
          {
@@ -156,18 +158,14 @@ const FakeClinicProfitData = () => {
             Footer: '',
          },
          {
-            Header: '# of Clinics',
+            Header: ' Clinics',
             id: 'cidNo',
             accessor: 'cid',
             aggregate: data => _.uniq(data).length,
             minWidth: 90,
             Aggregated: info => {
                return info.value ? (
-                  <span
-                     className='data-link'
-                     onClick={() => _onLinkClick(info.row.values.c)}
-                     style={{ cursor: 'pointer' }}
-                  >
+                  <span className='data-link' style={{ cursor: 'pointer', color: 'blue' }}>
                      {info.value}
                   </span>
                ) : (
@@ -186,7 +184,7 @@ const FakeClinicProfitData = () => {
                         <span
                            className='data-link'
                            onClick={() => _onLinkClick('All')}
-                           style={{ cursor: 'pointer' }}
+                           style={{ cursor: 'pointer', color: 'blue' }}
                         >
                            {total}
                         </span>
@@ -401,11 +399,17 @@ const FakeClinicProfitData = () => {
    const { getTableProps, getTableBodyProps, headerGroups, footerGroups, rows, prepareRow } =
       useTable(
          {
-            columns,
+            columns: selectValue === 1 ? columns : columns,
             data,
             autoResetExpanded: false,
             initialState: {
                groupBy: ['c'],
+               hiddenColumns:
+                  selectValue === 1
+                     ? ['EBITDA$', 'rev$']
+                     : selectValue === 2
+                     ? ['%TotEBITDA', 'EBITDARange']
+                     : [''],
             },
          },
          useGroupBy,
@@ -618,6 +622,7 @@ const FakeClinicProfitData = () => {
                </tbody>
             </table>
          </div>
+         <ModalProfit open={linkCategory} setLinkCategory={setLinkCategory} />
       </div>
    );
 };

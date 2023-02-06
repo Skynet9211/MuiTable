@@ -141,3 +141,20 @@
    background-color: #eff4fa;
    text-align: center;
 }
+.table-hover tbody tr:hover {
+   color: #212529;
+   background-color: #e8f3ff;
+}
+
+.table-hover tbody .row-selected {
+   background-color: #d3e8ff;
+}
+
+.table-hover tbody .row-selected:hover {
+   background-color: #d3e8ff;
+}
+.truncate-text {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}

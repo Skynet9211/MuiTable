@@ -7,7 +7,7 @@ import { CssBaseline } from '@mui/material';
 import ThemeProvider from './theme';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { blueGrey } from '@mui/material/colors';
-import HuddleReport from './pages/Clinics/HuddleReport';
+import HuddleReport from './pages/Clinics/Huddle Report/HuddleReport';
 
 function App() {
    const DEFAULT_WIDTH = 85;
@@ -29,47 +29,11 @@ function App() {
       sidebarWidthChange();
       setopen(!open);
    };
-   // const Drawer = styled(Drawer, { shouldForwardProp: prop => prop !== 'open' })(
-   //    ({ theme, open }) => ({
-   //       '& .MuiDrawer-paper': {
-   //          position: 'relative',
-   //          whiteSpace: 'nowrap',
-   //          width: drawerWidth,
-   //          transition: theme.transitions.create('width', {
-   //             easing: theme.transitions.easing.sharp,
-   //             duration: theme.transitions.duration.enteringScreen,
-   //          }),
-   //          boxSizing: 'border-box',
-   //          ...(!open && {
-   //             overflowX: 'hidden',
-   //             transition: theme.transitions.create('width', {
-   //                easing: theme.transitions.easing.sharp,
-   //                duration: theme.transitions.duration.leavingScreen,
-   //             }),
-   //             width: theme.spacing(7),
-   //             [theme.breakpoints.up('sm')]: {
-   //                width: theme.spacing(9),
-   //             },
-   //          }),
-   //       },
-   //    })
-   // );
+
    const sidebarWidthChange = () => {
       open && true ? setSidebarWidth(DEFAULT_WIDTH) : setSidebarWidth(EXPANDED_WIDTH);
    };
-   // const mdTheme = createTheme({
-   //    palette: {
-   //       primary: { main: 'rgb(0, 171, 85)' },
-   //       secondary: { main: blueGrey[500] },
-   //       textHeading: { main: 'rgb(0 0 0 / 61%)' },
-   //    },
 
-   //    components: {
-   //       Button: {
-   //          textTransform: 'none',
-   //       },
-   //    },
-   // });
    return (
       <div className='App'>
          <BrowserRouter>
@@ -82,22 +46,21 @@ function App() {
                />
                <div>
                   <Routes>
-                     <Route path='/' element={<Mainpage drawerWidth={sidebarWidth} />} />
+                     <Route path='/Home' element={<Mainpage drawerWidth={sidebarWidth} />} />
                      <Route
-                        path='/Clinic Profitability'
+                        path='Home/Clinic Profitability'
                         element={<Mainpage drawerWidth={sidebarWidth} />}
                      />
                      <Route
-                        path='Appointments'
+                        path='Appointments/Cancellations'
                         element={<Appointments drawerWidth={sidebarWidth} />}
                      />
                      <Route
-                        path='/Huddle Report'
+                        path='Home/Huddle Report'
                         element={<HuddleReport drawerWidth={sidebarWidth} />}
                      />
                   </Routes>
                </div>
-               {/* <Dashboard /> */}
             </ThemeProvider>
          </BrowserRouter>
       </div>

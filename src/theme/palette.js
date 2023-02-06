@@ -32,11 +32,11 @@ const SECONDARY = {
 };
 
 const INFO = {
-   lighter: '#D0F2FF',
-   light: '#74CAFF',
-   main: '#1890FF',
-   dark: '#0C53B7',
-   darker: '#04297A',
+   lighter: '#b3ffd9',
+   light: '#00e673',
+   main: '#00AB55',
+   dark: '#00994d',
+   darker: '#008040',
    contrastText: '#fff',
 };
 
@@ -78,13 +78,13 @@ const palette = {
    grey: GREY,
    divider: alpha(GREY[500], 0.24),
    text: {
-      primary: GREY[800],
+      primary: GREY[700],
       secondary: GREY[600],
       disabled: GREY[500],
    },
    background: {
       paper: '#fff',
-      default: GREY[300],
+      default: '#F9FAFB',
       neutral: GREY[200],
    },
    action: {

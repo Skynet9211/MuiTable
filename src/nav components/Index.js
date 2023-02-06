@@ -98,7 +98,7 @@ const Navbar = ({ drawerWidth, open, toggleDrawer }) => {
                sx={{
                   display: 'flex',
                   justifyContent: 'end',
-                  backgroundColor: theme => theme.palette.secondary.light,
+                  backgroundColor: theme => theme.palette.secondary.main,
                }}
                disableGutters
             >

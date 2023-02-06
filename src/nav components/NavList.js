@@ -25,11 +25,17 @@ const ListNav = () => {
    };
 
    return (
-      <List>
+      <List sx={{ backgroundColor: 'inherit' }}>
          {drawerDataMain.map((data, index) => (
             <React.Fragment key={data.id}>
                <Accordion
-                  sx={{ width: '98%', '&.MuiAccordion-root:before': { background: 'none' } }}
+                  sx={{
+                     width: '98%',
+                     '&.MuiAccordion-root:before': {
+                        background: 'inherit',
+                     },
+                     '&.MuiAccordion-root': { backgroundColor: 'inherit' },
+                  }}
                   disableGutters
                   elevation={0}
                >

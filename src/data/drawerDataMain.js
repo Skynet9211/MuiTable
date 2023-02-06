@@ -15,7 +15,7 @@ export const drawerDataMain = [
       id: 1,
       name: 'Clinics',
       icon: <LocalHospitalTwoToneIcon />,
-      path: '',
+      path: '/Home',
       submenu: [
          'Clinic Profitability',
          'Huddle Report',
