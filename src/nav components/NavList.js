@@ -19,12 +19,6 @@ import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecord
 
 import { Link } from 'react-router-dom';
 const ListNav = () => {
-   const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-   const handleListItemClick = (event, index) => {
-      setSelectedIndex(index);
-   };
-
    return (
       <List sx={{ backgroundColor: 'inherit' }}>
          {drawerDataMain.map((data, index) => (
@@ -60,26 +54,26 @@ const ListNav = () => {
                               activeStyle={{  fontWeight: "bold",
                               backgroundColor: "rgba(255, 255, 255, 0.1)",}}
                               to={`${data.path}/${sub}`}
-                              sx={{
-                                 '&.MuiListItemButton-root.Mui-selected': {
-                                    borderRadius: '10px',
-                                    boxShadow: 1,
-                                    bgcolor: 'grey.light',
-                                    color: 'grey',
-
-                                    '&.hover': {
-                                       borderRadius: '10px',
+                              
+                              sx={{ mb:'2px',
+                                
+                                    '&.active': {
+                                      color: 'text.primary',
+                                      bgcolor: 'primary.lighter',
+                                      fontWeight: 'fontWeightBold',
+                                      borderRadius:'15px',
+                                      boxShadow:theme=>theme.shadows[2]
                                     },
-                                 },
+                                
+                     
+                              
+                                
                                  '&.MuiListItemButton-root:hover': {
-                                    borderRadius: '10px',
+                                    borderRadius: '15px',
                                  },
-                                 marginBottom: '2px',
+                               
                               }}
-                              // component='a'
-                              // href={data.path}
-                              // selected={selectedIndex === i}
-                              // onClick={event => handleListItemClick(event, i)}
+                        
                            >
                               <ListItemIcon>
                                  <FiberManualRecordOutlinedIcon sx={{ fontSize: '10px' }} />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../../../data/Clinic profitability/clinicprofitabilityData';
+import { modalData as data } from '../../../data/Clinic profitability/cliniprofitabilityModalData';
 import { useExpanded, useGroupBy, useTable } from 'react-table';
 import _ from 'lodash';
 import numeral from 'numeral';
@@ -404,12 +404,12 @@ const FakeClinicProfitData = ({ selectValue }) => {
             autoResetExpanded: false,
             initialState: {
                groupBy: ['c'],
-               hiddenColumns:
-                  selectValue === 1
-                     ? ['EBITDA$', 'rev$']
-                     : selectValue === 2
-                     ? ['%TotEBITDA', 'EBITDARange']
-                     : [''],
+               // hiddenColumns:
+               //    selectValue === 1
+               //       ? ['EBITDA$', 'rev$']
+               //       : selectValue === 2
+               //       ? ['%TotEBITDA', 'EBITDARange']
+               //       : [''],
             },
          },
          useGroupBy,

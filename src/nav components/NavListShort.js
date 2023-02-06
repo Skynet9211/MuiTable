@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import { drawerDataMain } from '../data/drawerDataMain';
 import { grey } from '@mui/material/colors';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavListShort = () => {
    const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -42,9 +42,22 @@ const NavListShort = () => {
                title={data.submenu.map((sub, i) => (
                   <MenuItem
                      key={i + 'menu_item'}
-                     component={Link}
+                     component={NavLink}
                      to={`${data.path}/${sub}`}
-                     sx={{ textDecoration: 'none' }}
+                     sx={{ textDecoration: 'none',   '&.active': {
+                        color: 'text.primary',
+                        bgcolor: 'primary.lighter',
+                        fontWeight: 'fontWeightBold',
+                        borderRadius:'15px',
+                        boxShadow:theme=>theme.shadows[2]
+                      },
+                  
+       
+                
+                  
+                   '&.MuiListItemButton-root:hover': {
+                      borderRadius: '15px',
+                   }, }}
                     
                   >
                      <span style={{ textDecoration: 'none' }}>{sub}</span>
@@ -53,7 +66,7 @@ const NavListShort = () => {
                placement='right'
             >
                <ListItemButton
-                  component={Link}
+                  component={NavLink}
                   to={`${data.path}/${data.submenu[0]}`}
                   sx={{
                      paddingRight: '0px',
@@ -62,22 +75,23 @@ const NavListShort = () => {
                      justifyContent: 'center',
                      textDecoration: 'none',
                      margin: '2px',
-                     '&.MuiListItemButton-root.Mui-selected': {
-                        borderRadius: '10px',
-                        boxShadow: 1,
-                        bgcolor: '#primary.lighter',
-                        margin: '0px 5px',
-                        '&.hover': {
-                           borderRadius: '10px',
-                        },
-                     },
-                     '&.MuiListItemButton-root:hover': {
-                        borderRadius: '10px',
-                     },
+                     '&.active': {
+                        color: 'text.primary',
+                        bgcolor: 'primary.lighter',
+                        fontWeight: 'fontWeightBold',
+                        borderRadius:'15px',
+                        boxShadow:theme=>theme.shadows[2]
+                      },
+                  
+       
+                
+                  
+                   '&.MuiListItemButton-root:hover': {
+                      borderRadius: '15px',
+                   },
                      marginBottom: '2px',
                   }}
-                  // onClick={event => handleListItemClick(event, i)}
-                  // selected={selectedIndex === i}
+                
                >
                   {data.icon}
                   <Typography variant='caption' noWrap>

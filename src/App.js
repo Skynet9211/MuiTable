@@ -5,7 +5,7 @@ import Mainpage from './pages/Clinics/Clinic Profitability/clinicProfitability';
 import Appointments from './pages/appointments';
 import { CssBaseline } from '@mui/material';
 import ThemeProvider from './theme';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter,Navigate } from 'react-router-dom';
 import { blueGrey } from '@mui/material/colors';
 import HuddleReport from './pages/Clinics/Huddle Report/HuddleReport';
 import { logDOM } from '@testing-library/react';
@@ -62,14 +62,12 @@ function App() {
             
 
                   <Routes>
-                  <Route
-                        path='/'
-                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
+                 
+                       <Route
+                        path='*'
+                        element={<Navigate to='/Home/Clinic Profitability' replace={true}/>}
                      />
-                     <Route
-                        path='/Home'
-                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
-                     />
+                    
                      <Route
                         path='Home/Clinic Profitability'
                         element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
