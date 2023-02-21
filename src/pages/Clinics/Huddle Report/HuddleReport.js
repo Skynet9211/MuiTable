@@ -134,7 +134,7 @@ const HuddleReport = ({ drawerWidth, isLoading }) => {
             <Typography component={'div'} variant='subtitle1'>
                Clinic:Narberth
             </Typography>
-            <Button>
+            <Button color='secondary'>
                <ArrowCircleLeftOutlinedIcon />
                <Typography>Go back to Regional Overview</Typography>
             </Button>
