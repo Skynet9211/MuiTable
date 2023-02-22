@@ -66,7 +66,8 @@ const NavListShort = () => {
                placement='right'
             >
                <ListItemButton
-                 
+                  disableRipple
+                  disableTouchRipple
                   sx={{
                      paddingRight: '0px',
                      paddingLeft: '0px',

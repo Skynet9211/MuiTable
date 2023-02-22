@@ -10,7 +10,9 @@ import { blueGrey } from '@mui/material/colors';
 import HuddleReport from './pages/Clinics/Huddle Report/HuddleReport';
 import { logDOM } from '@testing-library/react';
 import { ScaleLoader } from 'react-spinners';
+import { usePromiseTracker } from 'react-promise-tracker';
 function App() {
+   const { promiseInProgress } = usePromiseTracker();
    const DEFAULT_WIDTH = 85;
    const EXPANDED_WIDTH = 240;
    const [open, setopen] = useState(false);
@@ -51,7 +53,7 @@ function App() {
                   toggleLoading={toggleLoading}
                />
                      <ScaleLoader
-                     loading={isLoading}
+                     loading={promiseInProgress}
                      color={'#0092E1'}
                      height={25}
                      aria-label='Loading Spinner'

@@ -16,17 +16,27 @@ import {
 import GetAppTwoToneIcon from '@mui/icons-material/GetAppTwoTone';
 import DataGridDemo from './fakeClinicData';
 import FakeChart1 from './fakeChart1';
+import { trackPromise} from 'react-promise-tracker'
 
 function Mainpage({ drawerWidth }) {
    const [openModal, setOpenModal] = React.useState(false);
    const [selectValue, setSelectValue] = React.useState(1);
    const [selectbar, setSelectbar] = React.useState('# of Clinics');
+   const [data,setData]=React.useState([])
    const handleChangeBar = e => {
       setSelectbar(e.target.value);
    };
-
+   const handleFetchData = async () => {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+      const data =  response.json();
+      const result1= data
+      console.log(result1);
+  }
+  
+React.useEffect(()=>{
+trackPromise(handleFetchData())
+},[])
    const handleChange = e => {
-      console.log(e.target.value);
       setSelectValue(e.target.value);
    };
    const style = {
