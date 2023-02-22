@@ -13,7 +13,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
             sx: {
                width: drawerWidth,
                borderRight: '1px dashed rgba(145, 158, 171, 0.24)',
-               backgroundColor: theme => theme.palette.background.default,
+               
             },
          }}
          anchor='left'
@@ -43,9 +43,9 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                            zIndex: '1250',
                            position: 'fixed',
                            marginTop: '-30px',
-                           backgroundColor: theme => theme.palette.background.default,
+                           backgroundColor:'#fff',
                            '&.MuiButtonBase-root:hover': {
-                              bgcolor: '#fff',
+                              bgcolor: '#f1f1f1',
                            },
                         }}
                         onClick={() => toggleDrawer()}
@@ -100,10 +100,10 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                            border: '1px dashed rgba(145, 158, 171, 0.24)',
                            zIndex: '1250',
                            position: 'fixed',
-
-                           backgroundColor: theme => theme.palette.background.default,
+                           backgroundColor:'#fff',
+                          
                            '&.MuiButtonBase-root:hover': {
-                              bgcolor: '#fff',
+                              bgcolor: '#f1f1f1',
                            },
                         }}
                         onClick={() => toggleDrawer()}
