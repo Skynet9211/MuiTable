@@ -62,7 +62,8 @@ trackPromise(handleFetchData())
             left: drawerWidth,
             display: 'flex',
             flexDirection: 'column',
-            height: 'calc(100vh - 50px)',
+            height: 'calc(100vh - 60px)',
+            
          }}
          classname='custom-box'
       >
@@ -70,7 +71,7 @@ trackPromise(handleFetchData())
            <Header title={'Clinic Profitability'}/>
          </Box>
          <Box
-            sx={{ overflow: 'auto', display: 'flex', flexDirection: 'column', marginLeft: '10px' }}
+            sx={{ overflow:'auto', display: 'flex', flexDirection: 'column', marginLeft: '10px',height:'100%' }}
          >
             <Paper
                sx={{

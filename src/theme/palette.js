@@ -23,7 +23,7 @@ const SECONDARY = {
 };
 
 const PRIMARY = {
-   lighter: '#8ef5c2',
+   lighter: '#a1dec0',
    light: '#7bd1a7',
    main: '#55c38e',
    dark: '#3caa73',
