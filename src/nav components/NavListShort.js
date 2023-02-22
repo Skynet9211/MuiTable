@@ -66,8 +66,7 @@ const NavListShort = () => {
                placement='right'
             >
                <ListItemButton
-                  component={NavLink}
-                  to={`${data.path}/${data.submenu[0]}`}
+                 
                   sx={{
                      paddingRight: '0px',
                      paddingLeft: '0px',
