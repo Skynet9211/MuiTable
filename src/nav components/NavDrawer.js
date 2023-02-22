@@ -50,7 +50,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                         }}
                         onClick={() => toggleDrawer()}
                         size='small'
-                        color='secondary'
+                        color='primary'
                      >
                         <KeyboardDoubleArrowRightIcon fontSize='small' />
                      </IconButton>
@@ -76,7 +76,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                         src='https://static.alpaca360.com/images/abi-logo.svg'
                         style={{
                            marginLeft: '10px',
-                           marginTop: '-5px',
+                           marginTop: '-14px',
                            background: '#26c3df',
                            borderRadius: '10px',
                         }}
@@ -85,7 +85,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                         paragraph
                         align='center'
                         color='primary'
-                        sx={{ marginTop: '10px' }}
+                      sx={{ marginTop: '2px' }}
                      >
                         Alpaca Business Intelligence
                      </Typography>
@@ -96,7 +96,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                         variant='contained'
                         sx={{
                            marginLeft: '222px',
-                           marginTop: '-62px',
+                           marginTop: '-54px',
                            border: '1px dashed rgba(145, 158, 171, 0.24)',
                            zIndex: '1250',
                            position: 'fixed',
@@ -108,7 +108,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                         }}
                         onClick={() => toggleDrawer()}
                         size='small'
-                        color='secondary'
+                        color='primary'
                      >
                         <KeyboardDoubleArrowLeftIcon fontSize='small' />
                      </IconButton>

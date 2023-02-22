@@ -81,7 +81,7 @@ const ListNav = () => {
                               <Typography
                                  sx={{ marginLeft: '-30px' }}
                                  variant='subtitle2'
-                                 color='secondary'
+                                 color='primary'
                               >
                                  {sub}
                               </Typography>

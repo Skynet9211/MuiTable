@@ -325,7 +325,7 @@ const ModalProfit = props => {
                }}
             >
                <Typography variant='h4'>Grand Total Clinic Details</Typography>
-               <Button variant='contained' sx={{ marginRight: '40px',boxShadow:'0px 5px 5px 0px rgb(85 195 142 / 24%)' }} color='secondary'>
+               <Button variant='contained' sx={{ marginRight: '40px',boxShadow:'0px 5px 5px 0px rgb(85 195 142 / 24%)' }} color='primary'>
                   <GetAppTwoToneIcon />
                   Export
                </Button>

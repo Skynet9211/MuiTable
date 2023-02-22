@@ -13,7 +13,7 @@ const GREY = {
    900: '#161C24',
 };
 
-const PRIMARY = {
+const SECONDARY = {
    lighter: '#D1E9FC',
    light: '#76B0F1',
    main: '#2065D1',
@@ -22,7 +22,7 @@ const PRIMARY = {
    contrastText: '#fff',
 };
 
-const SECONDARY = {
+const PRIMARY = {
    lighter: '#a1dec0',
    light: '#7bd1a7',
    main: '#55c38e',

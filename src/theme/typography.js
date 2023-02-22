@@ -22,8 +22,7 @@ export function responsiveFontSizes({ sm, md, lg }) {
 
 // ----------------------------------------------------------------------
 
-const FONT_PRIMARY = 'Public Sans, sans-serif'; // Google Font
-// const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
+const FONT_PRIMARY = 'Public Sans, sans-serif'; 
 
 const typography = {
    fontFamily: FONT_PRIMARY,
@@ -98,7 +97,7 @@ const typography = {
       fontWeight: 700,
       lineHeight: 24 / 14,
       fontSize: pxToRem(14),
-      textTransform: 'capitalize',
+      
    },
 };
 

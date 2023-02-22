@@ -17,6 +17,7 @@ import GetAppTwoToneIcon from '@mui/icons-material/GetAppTwoTone';
 import DataGridDemo from './fakeClinicData';
 import FakeChart1 from './fakeChart1';
 import { trackPromise} from 'react-promise-tracker'
+import Header from '../../../components/header'
 
 function Mainpage({ drawerWidth }) {
    const [openModal, setOpenModal] = React.useState(false);
@@ -66,9 +67,7 @@ trackPromise(handleFetchData())
          classname='custom-box'
       >
          <Box sx={{ alignSelf: 'left', marginLeft: '10px' }}>
-            <Typography variant='h3' gutterBottom>
-               Clinic Profitability
-            </Typography>
+           <Header title={'Clinic Profitability'}/>
          </Box>
          <Box
             sx={{ overflow: 'auto', display: 'flex', flexDirection: 'column', marginLeft: '10px' }}
@@ -104,7 +103,7 @@ trackPromise(handleFetchData())
                            sx={{ width: '120px' }}
                            fullWidth
                            size='small'
-                           color='secondary'
+                           color='primary'
                         >
                            <InputLabel>Select</InputLabel>
                            <Select
@@ -115,7 +114,7 @@ trackPromise(handleFetchData())
                               onChange={handleChange}
                               fullWidth
                               variant='outlined'
-                              color='secondary'
+                              color='primary'
                            >
                               <MenuItem value={1}>Total</MenuItem>
                               <MenuItem value={2}>Region</MenuItem>
@@ -124,7 +123,7 @@ trackPromise(handleFetchData())
                         </FormControl>
                      </Grid>
                      <Grid item marginRight={2}>
-                        <Button variant='outlined' color='secondary'>
+                        <Button variant='outlined' color='primary' sx={{textTransform:'none'}} size={'small'}>
                            <GetAppTwoToneIcon />
                            Export
                         </Button>
@@ -146,7 +145,7 @@ trackPromise(handleFetchData())
                   elevation={12}
                >
                   <Box sx={{ justifyContent: 'end', display: 'flex' }}>
-                     <FormControl size='small' sx={{ marginRight: '10px' }} color='secondary'>
+                     <FormControl size='small' sx={{ marginRight: '10px' }} color='primary'>
                         <InputLabel>Show</InputLabel>
                         <Select
                            labelId='demo-simple-select-label'
@@ -156,7 +155,7 @@ trackPromise(handleFetchData())
                            onChange={handleChangeBar}
                            fullWidth
                            variant='outlined'
-                           color='secondary'
+                           color='primary'
                         >
                            <MenuItem value={'# of Clinics'}># of Clinics</MenuItem>
                            <MenuItem value={'Region'}>Region</MenuItem>
