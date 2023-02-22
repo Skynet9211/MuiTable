@@ -44,19 +44,15 @@ const NavListShort = () => {
                      key={i + 'menu_item'}
                      component={NavLink}
                      to={`${data.path}/${sub}`}
-                     sx={{ textDecoration: 'none',   '&.active': {
+                     sx={{'&.active': {
                         color: 'text.primary',
                         bgcolor: 'primary.lighter',
                         fontWeight: 'fontWeightBold',
-                        borderRadius:'15px',
+                        borderRadius:'10px',
                         boxShadow:theme=>theme.shadows[2]
-                      },
-                  
-       
-                
-                  
-                   '&.MuiListItemButton-root:hover': {
-                      borderRadius: '15px',
+                      },                  
+                   '&.hover': {
+                      borderRadius: '10px',
                    }, }}
                     
                   >
