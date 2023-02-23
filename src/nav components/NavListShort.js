@@ -24,12 +24,15 @@ const NavListShort = () => {
       <List>
          {drawerDataMain.map((data, i) => (
             <Tooltip
+            //leaveDelay={5000000}
+            
                componentsProps={{
                   tooltip: {
                      sx: {
                         bgcolor: '#fff',
                         boxShadow: 5,
                         color: grey[900],
+                        width:'200px',
 
                         '& .MuiTooltip-arrow': {
                            color: '#fafafa',
@@ -43,7 +46,7 @@ const NavListShort = () => {
                   <MenuItem
                      key={i + 'menu_item'}
                      component={NavLink}
-                     to={`${data.path}/${sub}`}
+                     to={`${data.path}/${sub.replaceAll(' ','')}`}
                      sx={{'&.active': {
                         color: 'text.primary',
                         bgcolor: 'primary.lighter',
@@ -51,7 +54,7 @@ const NavListShort = () => {
                         borderRadius:'10px',
                         boxShadow:theme=>theme.shadows[2]
                       },                  
-                   '&.hover': {
+                   '&:hover': {
                       borderRadius: '10px',
                    }, }}
                     

@@ -313,7 +313,7 @@ const ModalProfit = props => {
             onClose={() => props.setLinkCategory(null)}
             aria-labelledby='customized-dialog-title'
             open={props.open}
-            maxWidth='xl'
+            maxWidth='lg'
          >
             <BootstrapDialogTitle
                id='customized-dialog-title'

@@ -53,7 +53,7 @@ const ListNav = () => {
                               component={NavLink}
                               activeStyle={{  fontWeight: "bold",
                               backgroundColor: "rgba(255, 255, 255, 0.1)",}}
-                              to={`${data.path}/${sub}`}
+                              to={`${data.path}/${sub.replaceAll(' ','')}`}
                               
                               sx={{ mb:'2px',color:'primary.main',
                                 
