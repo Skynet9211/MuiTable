@@ -3,12 +3,9 @@ import './App.css';
 import Navbar from './nav components/Index';
 import Mainpage from './pages/Clinics/Clinic Profitability/clinicProfitability';
 import Appointments from './pages/appointments';
-import { CssBaseline } from '@mui/material';
 import ThemeProvider from './theme';
 import { Routes, Route, BrowserRouter,Navigate } from 'react-router-dom';
-import { blueGrey } from '@mui/material/colors';
 import HuddleReport from './pages/Clinics/Huddle Report/HuddleReport';
-import { logDOM } from '@testing-library/react';
 import { ScaleLoader } from 'react-spinners';
 import { usePromiseTracker } from 'react-promise-tracker';
 function App() {
@@ -63,14 +60,16 @@ function App() {
             
 
                   <Routes>
-                 
                        <Route
                         path='*'
-                        element={<Navigate to='/Home/Clinic Profitability' replace={true}/>}
+                        element={<Navigate to='/Home' replace={true}/>}
                      />
-                    
                      <Route
-                        path='Home/Clinic Profitability'
+                        path='Home'
+                        element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
+                     />
+                     <Route
+                        path='Home/ClinicProfitability'
                         element={<Mainpage drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                      <Route
@@ -78,7 +77,7 @@ function App() {
                         element={<Appointments drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                      <Route
-                        path='Home/Huddle Report'
+                        path='Home/HuddleReport'
                         element={<HuddleReport drawerWidth={sidebarWidth} isLoading={isLoading} />}
                      />
                   </Routes>
