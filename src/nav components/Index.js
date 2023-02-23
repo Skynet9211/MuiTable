@@ -20,11 +20,13 @@ import PersonIcon from "@mui/icons-material/Person";
 import NavDrawer from "./NavDrawer";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import WebSettingsModal from "../components/webSettingsModal";
+import ClinicFilters from "../components/filters/clinicFilters";
 const Navbar = ({ drawerWidth, openDrawer, toggleDrawer, toggleLoading }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openTooltip, setOpenTooltip] = React.useState(false);
   const [openModal,setOpenModal]=useState(false)
-   const notifications=true
+  const [notifications,setNotifications]=useState(true)
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -33,6 +35,11 @@ const Navbar = ({ drawerWidth, openDrawer, toggleDrawer, toggleLoading }) => {
     setAnchorEl(null);
   };
 
+  const handlenotificationReset =()=>{
+    setNotifications(false)
+    console.log(notifications);
+    setTimeout(()=>{setNotifications(true)},[25000])
+  }
   const handleOpenModal=()=>{
    setOpenModal(true)
   }
@@ -94,9 +101,11 @@ const Navbar = ({ drawerWidth, openDrawer, toggleDrawer, toggleLoading }) => {
             alignItems="center"
             sx={{ marginRight: "30px" }}
           >
+            <ClinicFilters/>
             <Button
               onClick={(e) => {
                 handleClick(e);
+                handlenotificationReset()
               }}
               size="small"
               sx={{
