@@ -55,7 +55,7 @@ const ListNav = () => {
                               backgroundColor: "rgba(255, 255, 255, 0.1)",}}
                               to={`${data.path}/${sub}`}
                               
-                              sx={{ mb:'2px',
+                              sx={{ mb:'2px',color:'primary.main',
                                 
                                     '&.active': {
                                       color: 'text.primary',
@@ -76,12 +76,12 @@ const ListNav = () => {
                         
                            >
                               <ListItemIcon>
-                                 <FiberManualRecordOutlinedIcon sx={{ fontSize: '10px' }} />
+                                 <FiberManualRecordOutlinedIcon sx={{ fontSize: '10px',color:'inherit' }} />
                               </ListItemIcon>
                               <Typography
-                                 sx={{ marginLeft: '-30px' }}
+                                 sx={{ marginLeft: '-30px',color:'inherit'}}
                                  variant='subtitle2'
-                                 color='primary'
+                                 
                               >
                                  {sub}
                               </Typography>

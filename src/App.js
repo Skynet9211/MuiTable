@@ -40,14 +40,13 @@ function App() {
    const sidebarWidthChange = () => {
       open && true ? setSidebarWidth(DEFAULT_WIDTH) : setSidebarWidth(EXPANDED_WIDTH);
    };
-   console.log(isLoading);
    return (
       <div className='App'>
          <BrowserRouter>
             <ThemeProvider>
                <Navbar
                   drawerWidth={sidebarWidth}
-                  open={open}
+                  openDrawer={open}
                   toggleDrawer={toggleDrawer}
                   handleChange={handleChange}
                   toggleLoading={toggleLoading}

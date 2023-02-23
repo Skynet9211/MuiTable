@@ -31,7 +31,7 @@ function Mainpage({ drawerWidth }) {
       const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
       const data =  response.json();
       const result1= data
-      console.log(result1);
+      
   }
   
 React.useEffect(()=>{

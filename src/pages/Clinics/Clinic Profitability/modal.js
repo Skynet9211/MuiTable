@@ -197,7 +197,7 @@ const ModalProfit = props => {
             return (
                <Chip
                   label={'LossMaking'}
-                  sx={{ backgroundColor: '#ff7874', color: '#fff', width: widthAuto ? 'auto' : 90 }}
+                  sx={{ backgroundColor: '#ff7874', color: '#fff', width: widthAuto ? 'auto' : 95 ,fontWeight:700}}
                   size='small'
                />
             );
@@ -206,8 +206,9 @@ const ModalProfit = props => {
                <Chip
                   sx={{
                      background: '#FFB300',
-                     width: widthAuto ? 'auto' : 90,
+                     width: widthAuto ? 'auto' : 95,
                      color: '#fff',
+                     fontWeight:700
                   }}
                   label='Marginal'
                   size='small'
@@ -217,10 +218,10 @@ const ModalProfit = props => {
             return (
                <Chip
                   sx={{
-                     width: widthAuto ? 'auto' : 90,
+                     width: widthAuto ? 'auto' : 95,
                      background: '#00B1FF',
 
-                     color: '#fff',
+                     color: '#fff',fontWeight:700
                   }}
                   label={'OK'}
                   size='small'
@@ -230,9 +231,9 @@ const ModalProfit = props => {
             return (
                <Chip
                   style={{
-                     width: widthAuto ? 'auto' : 90,
+                     width: widthAuto ? 'auto' : 95,
                      background: '#77BD76',
-                     color: '#fff',
+                     color: '#fff',fontWeight:700
                   }}
                   label={'Good'}
                   size='small'
@@ -242,10 +243,10 @@ const ModalProfit = props => {
             return (
                <Chip
                   style={{
-                     width: widthAuto ? 'auto' : 90,
+                     width: widthAuto ? 'auto' : 95,
                      background: '#60945F',
 
-                     color: '#fff',
+                     color: '#fff',fontWeight:700
                   }}
                   label={'Outstanding'}
                   size='small'
@@ -434,7 +435,7 @@ const ModalProfit = props => {
                   display: 'flex',
                   justifyContent: 'left',
                   height: '40px',
-                  fontWeight: '600',
+                  fontWeight: '700',
                   backgroundColor: '#f8f9fa',
                }}
             >

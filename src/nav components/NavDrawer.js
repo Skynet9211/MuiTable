@@ -28,7 +28,7 @@ const NavDrawer = ({ open, drawerWidth, toggleDrawer }) => {
                      alt='ABI'
                      src='https://static.alpaca360.com/images/abi-logo.svg'
                      style={{
-                        marginLeft: '10px',
+                        marginLeft: '25px',
                         marginTop: '10px',
                         background: '#26c3df',
                         borderRadius: '10px',

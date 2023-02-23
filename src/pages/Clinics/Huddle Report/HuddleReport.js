@@ -149,7 +149,7 @@ const HuddleReport = ({ drawerWidth, isLoading }) => {
         </Typography>
         <Button color="primary">
           <ArrowCircleLeftOutlinedIcon />
-          <Typography>Go back to Regional Overview</Typography>
+          <Typography>{'Go back to Regional Overview'}</Typography>
         </Button>
       </Box>
       <Box display={"flex"} width="auto" justifyContent={"center"} mb={2}>

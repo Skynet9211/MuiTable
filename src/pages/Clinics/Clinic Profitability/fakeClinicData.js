@@ -3,7 +3,7 @@ import { modalData as data } from '../../../data/Clinic profitability/cliniprofi
 import { useExpanded, useGroupBy, useTable } from 'react-table';
 import _ from 'lodash';
 import numeral from 'numeral';
-import { Modal } from '@mui/material';
+import { Modal,Chip } from '@mui/material';
 import ModalProfit from './modal';
 
 const FakeClinicProfitData = ({ selectValue }) => {
@@ -51,84 +51,63 @@ const FakeClinicProfitData = ({ selectValue }) => {
       switch (value) {
          case 'Lossmaking':
             return (
-               <div
-                  style={{
-                     width: widthAuto ? 'auto' : 90,
-                     background: '#FF7378',
-                     borderRadius: 8,
-                     fontSize: 14,
-                     lineHeight: '18px',
-                     padding: '1px 5px',
-                     color: '#fff',
-                  }}
-               >
-                  {'Lossmaking'}
-               </div>
+               <Chip
+                  label={'LossMaking'}
+                  sx={{ backgroundColor: '#ff7874', color: '#fff', width: widthAuto ? 'auto' : 95 ,fontWeight:700}}
+                  size='small'
+               />
             );
          case 'Marginal':
             return (
-               <div
-                  style={{
-                     width: widthAuto ? 'auto' : 90,
+               <Chip
+                  sx={{
                      background: '#FFB300',
-                     borderRadius: 8,
-                     fontSize: 14,
-                     lineHeight: '18px',
-                     padding: '1px 5px',
+                     width: widthAuto ? 'auto' : 95,
                      color: '#fff',
+                     fontWeight:700
                   }}
-               >
-                  {'Marginal'}
-               </div>
+                  label='Marginal'
+                  size='small'
+               />
             );
          case 'OK':
             return (
-               <div
-                  style={{
-                     width: widthAuto ? 'auto' : 90,
+               <Chip
+                  sx={{
+                     width: widthAuto ? 'auto' : 95,
                      background: '#00B1FF',
-                     borderRadius: 8,
-                     fontSize: 14,
-                     lineHeight: '18px',
-                     padding: '1px 5px',
-                     color: '#fff',
+
+                     color: '#fff',fontWeight:700
                   }}
-               >
-                  {'OK'}
-               </div>
+                  label={'OK'}
+                  size='small'
+               />
             );
          case 'gOOD':
          case 'Good':
             return (
-               <div
-                  style={{
-                     width: widthAuto ? 'auto' : 90,
-                     background: '#77BD76',
-                     borderRadius: 8,
-                     fontSize: 14,
-                     lineHeight: '18px',
-                     padding: '1px 5px',
-                     color: '#fff',
-                  }}
-               >
-                  {'Good'}
-               </div>
+               <Chip
+               style={{
+                  width: widthAuto ? 'auto' : 95,
+                  background: '#77BD76',
+                  color: '#fff',fontWeight:700
+               }}
+               label={'Good'}
+               size='small'
+            />
             );
          case 'Outstanding':
             return (
-               <div
+               <Chip
                   style={{
-                     width: widthAuto ? 'auto' : 90,
+                     width: widthAuto ? 'auto' : 95,
                      background: '#60945F',
-                     borderRadius: 8,
-                     fontSize: 14,
-                     lineHeight: '18px',
-                     padding: '1px 5px',
-                     color: '#fff',
+
+                     color: '#fff',fontWeight:700
                   }}
-               >
-                  {'Outstanding'}
-               </div>
+                  label={'Outstanding'}
+                  size='small'
+               />
             );
          default:
             return value;
